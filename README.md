@@ -23,32 +23,3 @@ python3 separate_baseline_rules.py NFV_rows.csv NFV_Extraction.csv NFV_address_g
 
 This will generate a file called `baseline_rules_filtered.csv` that contains the subnet(s) associated with each rule.
 
----
-
-## 📄 ACI GSU and NFV Contracts Verification
-
-### Document Structure
-
-#### ACI GSU Contracts
-
-- **ACI GSU Contracts & Filters**: Extracted GSU contracts with the corresponding filters.
-- **NPD 1.52 GSU Contracts**: Contracts from NPD 1.52.
-- **Contracts that match NPD 1.52**: Contracts appearing in both ACI and NPD.
-- **Missing**: Contracts in NPD but not in ACI.
-
-#### ACI NFV Contracts
-
-- **ACI NFV Contracts & Filters**: Extracted NFV contracts with filters.
-- **NPD 1.52 Bowen-to-NFV Contracts**: Migrated from Bowen to NFV in NPD.
-- **Contracts that match NPD 1.52**: Appears in both datasets.
-- **Missing**: Present in NPD but not in ACI.
-
----
-
-### ▶️ Run the Extraction Script
-
-```bash
-mv contracts_filters.txt contracts_filters.py
-python contracts_filters.py gsu-contracts-out.json gsu-filters-out.json
-python contracts_filters.py nfv-contracts-out.json nfv-filters-out.json
-
