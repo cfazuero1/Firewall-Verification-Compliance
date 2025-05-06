@@ -52,27 +52,3 @@ mv contracts_filters.txt contracts_filters.py
 python contracts_filters.py gsu-contracts-out.json gsu-filters-out.json
 python contracts_filters.py nfv-contracts-out.json nfv-filters-out.json
 
-## 🌐 Interlink System Baseline Access Lists
-
-The interlink system is baseline and located in the subnet: `172.31.40.16/28`  
-**Host IP Range**: `172.31.40.17` – `172.31.40.30`
-
-### Relevant Object Groups
-
-```vbnet
-object-group network OCTS_Gateway
- description OCTS Gateway Server
- network-object host 172.31.40.17
-
-object-group network OCTS_NSW_Int
- description OCTS NSW Interlink
- network-object host 172.31.40.18
-
-object-group network OCTS_VIC_Int
- description OCTS VIC Interlink
- network-object host 172.31.40.19
-
-object-group network OCTS_OfficeSystem
- description OCTS Office System
- network-object host 172.31.40.20
-
